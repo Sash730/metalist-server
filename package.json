@@ -1,0 +1,19 @@
+{
+  "name": "metalist-server",
+  "version": "1.0.0",
+  "description": "server on npm sripts",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sash730/metalist-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sash730/metalist-server/issues"
+  },
+  "homepage": "https://github.com/Sash730/metalist-server#readme"
+}
