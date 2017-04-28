@@ -4,10 +4,9 @@
   "description": "server on npm sripts",
   "main": "app.js",
   "scripts": {
-    "test": "npm run build && NODE_ENV=test mocha dist/**/*.{spec,integration}.js --require mocha.conf.js",
-    "build": "babel server --presets es2015 -d dist ",
-    "watch": "babel server --watch --out-dir dist",
-    "start": "npm run build && node dist & npm run watch"
+    "test": "npm run build & NODE_ENV=test mocha dist/**/*.{spec,integration}.js --require mocha.conf.js",
+    "build": "babel server --watch --out-dir dist ",
+    "start": "npm run build & node dist"
   },
   "repository": {
     "type": "git",
@@ -58,7 +57,6 @@
     "chai-as-promised": "^5.1.0",
     "chai-things": "^0.2.0",
     "connect-livereload": "^0.5.3",
-    "del": "^2.2.2",
     "mocha": "^2.2.5",
     "proxyquire": "^1.0.1",
     "sinon-chai": "^2.8.0",
@@ -66,6 +64,11 @@
   },
   "engines": {
     "node": "^6.10.0",
-    "npm": "^3.6.0"
+    "npm": "2.x || 3.x || 4.x"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }

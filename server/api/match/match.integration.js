@@ -30,7 +30,7 @@ describe('Match API:', function () {
     it('POST /api/matches/: should respond with a status 200 and new match', function (done) {
       request(app)
         .post('/api/matches')
-        .send( {
+        .send({
           rival: 'Dynamo',
           info: '123',
           poster: 'assets/teamLogo/3.png',
@@ -199,7 +199,7 @@ describe('Match API:', function () {
     });
   }
 
- function createMatch(matches) {
+  function createMatch(matches) {
     return matches.map(match => {
       let newMatch = new Match({
         rival: match.rival,
@@ -210,5 +210,5 @@ describe('Match API:', function () {
       });
       return newMatch.save();
     })
- }
+  }
 });
