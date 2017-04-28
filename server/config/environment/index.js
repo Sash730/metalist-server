@@ -20,9 +20,6 @@ var all = {
     // Root path of server
     root: path.normalize(__dirname + '/../../..'),
 
-    //////////// Root path of client////////////////////////
-    clientRoot: path.normalize(__dirname + '/../../../../metalist/dist/'),
-
     // Server port
     port: process.env.PORT || 9000,
 

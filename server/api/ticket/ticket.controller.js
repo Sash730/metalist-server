@@ -179,7 +179,7 @@ function getFormattedTicket(ticket) {
 }
 
 function getTicketByCode(code) {
-  //let dateNow = new Date();
+  let dateNow = new Date();
 
   return Ticket.findOne({accessCode: code, status: 'paid'});
   // .where({
@@ -191,7 +191,7 @@ function getTicketByCode(code) {
 }
 
 function getCountTicketsByTribune(tribune) {
-  //let dateNow = new Date();
+  let dateNow = new Date();
 
   return Ticket.find({status: 'paid'})
   /*.where({$and: [

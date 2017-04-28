@@ -5,8 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run build & NODE_ENV=test mocha dist/**/*.{spec,integration}.js --require mocha.conf.js",
-    "build": "babel server --watch --out-dir dist ",
-    "start": "npm run build & node dist"
+    "build": "babel server --out-dir dist/server ",
+    "clean": "rimraf dist/*",
+    "move": "mv ../metalist/dist/client ./dist/client",
+    "start": "NODE_ENV=development node server",
+    "prod": "NODE_ENV=production node server",
+    "docker:build": " npm run clean && npm run move && npm run build && docker-compose -f docker-compose.yml build"
+
   },
   "repository": {
     "type": "git",
@@ -59,8 +64,9 @@
     "connect-livereload": "^0.5.3",
     "mocha": "^2.2.5",
     "proxyquire": "^1.0.1",
-    "sinon-chai": "^2.8.0",
-    "sinon": "^1.16.1"
+    "rimraf": "^2.6.1",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
   },
   "engines": {
     "node": "^6.10.0",

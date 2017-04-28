@@ -1,6 +1,7 @@
 'use strict';
 
 import mongoose from 'mongoose';
+import {formatMoney} from '../../util';
 
 const TicketSchema = new mongoose.Schema({
   cartId: {

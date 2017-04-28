@@ -1,5 +1,6 @@
 'use strict';
 import * as barcode from 'bwip-js';
+import * as fs from 'fs';
 import moment from 'moment-timezone';
 import * as log4js from 'log4js';
 
@@ -52,7 +53,7 @@ let generatePdfPage = (res, ticket, png) => {
     .text('Трибуна: ', 350, 45)
     .text('Сектор: ', 350, 65)
     .text('Ряд: ', 350, 85)
-    .text('Место: ', 350, 105);
+    .text('Место: ', 350, 105)
 
   doc.fontSize(14)
     .text( moment(ticket.match.date).tz("Europe/Kiev").format('DD.MM.YYYY HH:mm'), 8, 15, {align: 'center'});
