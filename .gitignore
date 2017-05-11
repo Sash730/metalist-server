@@ -34,3 +34,6 @@ dist
 
 #Dir .idea
 .idea
+
+#local.env
+server/config/local.env.js
